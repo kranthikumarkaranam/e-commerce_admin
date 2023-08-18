@@ -1,5 +1,16 @@
-import Image from 'next/image';
+'use client';
+
+import { Modal } from '@/components/modal';
 
 export default function Home() {
-	return <h1>Hello World!</h1>;
+	return (
+		<Modal
+			title='title'
+			description='description'
+			isOpen
+			onClose={() => {}}
+		>
+			childen
+		</Modal>
+	);
 }
