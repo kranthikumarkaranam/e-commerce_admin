@@ -1,6 +1,5 @@
 'use client';
 
-// Importing necessary components from the 'ui/dialog' module.
 import {
 	Dialog,
 	DialogContent,
@@ -41,10 +40,10 @@ export const Modal: React.FC<ModalProps> = ({
 			<DialogContent>
 				<DialogHeader>
 					<DialogTitle>{title}</DialogTitle> {/* Render the modal title */}
-					<DialogDescription>{description}</DialogDescription>
+					<DialogDescription>{description}</DialogDescription>{' '}
 					{/* Render the modal description */}
 				</DialogHeader>
-				<div>{children}</div>
+				<div>{children}</div>{' '}
 				{/* Render any child components passed to the Modal */}
 			</DialogContent>
 		</Dialog>
