@@ -22,7 +22,7 @@ import {
 	FormMessage,
 } from '@/components/ui/form';
 import { Separator } from '@/components/ui/separator';
-import { Heading } from '@/components/ui/non-shadcn-ui/heading';
+import { Heading } from '@/components/heading';
 import { AlertModal } from '@/components/modals/alert-modal';
 import {
 	Select,
@@ -31,7 +31,7 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from '@/components/ui/select';
-import ImageUpload from '@/components/ui/non-shadcn-ui/image-upload';
+import ImageUpload from '@/components/image-upload';
 import { Checkbox } from '@/components/ui/checkbox';
 
 const formSchema = z.object({

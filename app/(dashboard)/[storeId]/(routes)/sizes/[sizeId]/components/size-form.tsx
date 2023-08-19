@@ -21,7 +21,7 @@ import {
 	FormMessage,
 } from '@/components/ui/form';
 import { Separator } from '@/components/ui/separator';
-import { Heading } from '@/components/ui/non-shadcn-ui/heading';
+import { Heading } from '@/components/heading';
 import { AlertModal } from '@/components/modals/alert-modal';
 
 const formSchema = z.object({

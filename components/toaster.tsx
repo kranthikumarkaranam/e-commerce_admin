@@ -8,7 +8,7 @@ import {
 	ToastTitle,
 	ToastViewport,
 } from '@/components/ui/toast';
-import { useToast } from '@/components/ui/non-shadcn-ui/use-toast';
+import { useToast } from '@/components/use-toast';
 
 // The Toaster component displays toast notifications
 export function Toaster() {

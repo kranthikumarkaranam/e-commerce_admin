@@ -1,7 +1,7 @@
 'use client';
 
-import { DataTable } from '@/components/ui/non-shadcn-ui/data-table';
-import { Heading } from '@/components/ui/non-shadcn-ui/heading';
+import { DataTable } from '@/components/data-table';
+import { Heading } from '@/components/heading';
 import { Separator } from '@/components/ui/separator';
 
 import { columns, OrderColumn } from './columns';

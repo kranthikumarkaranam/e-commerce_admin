@@ -1,6 +1,6 @@
 'use client';
 
-import { Loader } from '@/components/ui/non-shadcn-ui/loader'; // Importing Loader component
+import { Loader } from '@/components/loader'; // Importing Loader component
 
 // Loading component
 const Loading = () => {

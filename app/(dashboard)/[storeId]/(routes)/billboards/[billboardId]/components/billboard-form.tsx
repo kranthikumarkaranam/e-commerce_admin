@@ -21,9 +21,9 @@ import {
 	FormMessage,
 } from '@/components/ui/form';
 import { Separator } from '@/components/ui/separator';
-import { Heading } from '@/components/ui/non-shadcn-ui/heading';
+import { Heading } from '@/components/heading';
 import { AlertModal } from '@/components/modals/alert-modal';
-import ImageUpload from '@/components/ui/non-shadcn-ui/image-upload';
+import ImageUpload from '@/components/image-upload';
 
 // Define the validation schema using Zod for the form fields
 const formSchema = z.object({

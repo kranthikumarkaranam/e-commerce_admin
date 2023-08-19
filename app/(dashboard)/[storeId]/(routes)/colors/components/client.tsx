@@ -4,10 +4,10 @@ import { Plus } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
 
 import { Button } from '@/components/ui/button';
-import { DataTable } from '@/components/ui/non-shadcn-ui/data-table';
-import { Heading } from '@/components/ui/non-shadcn-ui/heading';
+import { DataTable } from '@/components/data-table';
+import { Heading } from '@/components/heading';
 import { Separator } from '@/components/ui/separator';
-import { ApiList } from '@/components/ui/non-shadcn-ui/api-list';
+import { ApiList } from '@/components/api-list';
 
 import { columns, ColorColumn } from './columns';
 

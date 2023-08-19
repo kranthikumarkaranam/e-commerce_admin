@@ -1,6 +1,6 @@
 'use client';
 
-import { Loader } from '@/components/ui/non-shadcn-ui/loader';
+import { Loader } from '@/components/loader';
 
 // Define the 'Loading' functional component.
 const Loading = () => {
