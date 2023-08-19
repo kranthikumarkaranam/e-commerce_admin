@@ -4,10 +4,10 @@ import { Plus } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
 
 import { Button } from '@/components/ui/button';
-import { DataTable } from '@/components/ui/data-table';
-import { Heading } from '@/components/ui/heading';
+import { DataTable } from '@/components/ui/non-shadcn-ui/data-table';
+import { Heading } from '@/components/ui/non-shadcn-ui/heading';
 import { Separator } from '@/components/ui/separator';
-import { ApiList } from '@/components/ui/api-list';
+import { ApiList } from '@/components/ui/non-shadcn-ui/api-list';
 
 // Import the column configurations defined in the 'columns' module.
 import { columns, BillboardColumn } from './columns';

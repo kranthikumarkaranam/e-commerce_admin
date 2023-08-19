@@ -21,9 +21,9 @@ import {
 	FormMessage,
 } from '@/components/ui/form';
 import { Separator } from '@/components/ui/separator';
-import { Heading } from '@/components/ui/heading';
+import { Heading } from '@/components/ui/non-shadcn-ui/heading';
 import { AlertModal } from '@/components/modals/alert-modal';
-import { ApiAlert } from '@/components/ui/api-alert';
+import { ApiAlert } from '@/components/ui/non-shadcn-ui/api-alert';
 import { useOrigin } from '@/hooks/use-origin';
 
 // Define the validation schema using zod

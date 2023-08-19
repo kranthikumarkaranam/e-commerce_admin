@@ -1,6 +1,6 @@
 'use client';
 
-import { ApiAlert } from '@/components/ui/api-alert';
+import { ApiAlert } from '@/components/ui/non-shadcn-ui/api-alert';
 import { useOrigin } from '@/hooks/use-origin';
 import { useParams } from 'next/navigation';
 

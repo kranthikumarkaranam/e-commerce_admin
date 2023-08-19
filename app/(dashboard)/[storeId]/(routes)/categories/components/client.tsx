@@ -4,13 +4,13 @@ import { Plus } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
 
 import { Button } from '@/components/ui/button';
-import { DataTable } from '@/components/ui/data-table';
-import { Heading } from '@/components/ui/heading';
+import { DataTable } from '@/components/ui/non-shadcn-ui/data-table';
+import { Heading } from '@/components/ui/non-shadcn-ui/heading';
 import { Separator } from '@/components/ui/separator';
-import { ApiAlert } from '@/components/ui/api-alert';
+import { ApiAlert } from '@/components/ui/non-shadcn-ui/api-alert';
 
 import { columns, CategoryColumn } from './columns';
-import { ApiList } from '@/components/ui/api-list';
+import { ApiList } from '@/components/ui/non-shadcn-ui/api-list';
 
 // Define the CategoriesClient component
 interface CategoriesClientProps {

@@ -72,7 +72,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
 			{/* Cloudinary upload widget */}
 			<CldUploadWidget
 				onUpload={onUpload}
-				uploadPreset='t4drjppf'
+				uploadPreset='skzx9lc0'
 			>
 				{({ open }) => {
 					const onClick = () => {
