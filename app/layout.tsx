@@ -5,15 +5,18 @@ import { ModalProvider } from '@/providers/modal-provider';
 import { ToastProvider } from '@/providers/toast-provider';
 import { ThemeProvider } from '@/providers/theme-provider';
 
-import './globals.css';
+import './globals.css'; // Importing global styles
 
+// Load the Inter font with Latin subset
 const inter = Inter({ subsets: ['latin'] });
 
+// Metadata for the application
 export const metadata = {
 	title: 'Dashboard',
 	description: 'E-Commerce Dashboard',
 };
 
+// Root layout component
 export default async function RootLayout({
 	children,
 }: {
@@ -28,9 +31,9 @@ export default async function RootLayout({
 						defaultTheme='system'
 						enableSystem
 					>
-						<ToastProvider />
-						<ModalProvider />
-						{children}
+						<ToastProvider /> {/* Providing toast notifications */}
+						<ModalProvider /> {/* Providing modal dialogs */}
+						{children} {/* Render the main content */}
 					</ThemeProvider>
 				</body>
 			</html>
