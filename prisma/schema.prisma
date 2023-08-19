@@ -1,61 +1,55 @@
-// Define the generator for Prisma client
 generator client {
   provider = "prisma-client-js"
 }
 
-// Define the database configuration and connection
 datasource db {
   provider = "mysql"
   url = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
-// Model representing a store in the application
 model Store {
-  id          String    @id @default(uuid())
-  name        String
-  userId      String    // ID of the user associated with the store
-  billboards  Billboard[] @relation("StoreToBillboard")
-  categories  Category[] @relation("StoreToCategory")
-  products    Product[]  @relation("StoreToProduct")
-  sizes       Size[]     @relation("StoreToSize")
-  colors      Color[]     @relation("StoreToColor")
-  orders      Order[]     @relation("StoreToOrder")
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  id              String    @id @default(uuid())
+  name            String
+  userId          String
+  billboards      Billboard[] @relation("StoreToBillboard")
+  categories      Category[] @relation("StoreToCategory")
+  products        Product[]  @relation("StoreToProduct")
+  sizes           Size[]     @relation("StoreToSize")
+  colors          Color[]     @relation("StoreToColor")
+  orders          Order[]     @relation("StoreToOrder")
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
 }
 
-// Model representing a billboard associated with a store
 model Billboard {
-  id          String    @id @default(uuid())
-  storeId     String    // Foreign Key to Store
-  store       Store     @relation("StoreToBillboard", fields: [storeId], references: [id])
+  id          String @id @default(uuid())
+  storeId     String
+  store       Store @relation("StoreToBillboard", fields: [storeId], references: [id])
   label       String
   imageUrl    String
-  categories  Category[] // Relation to Category model
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  categories  Category[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 
   @@index([storeId])
 }
 
-// Model representing a category associated with a store
 model Category {
-  id          String    @id @default(uuid())
-  storeId     String    // Foreign Key to Store
-  store       Store     @relation("StoreToCategory", fields: [storeId], references: [id])
-  billboardId String    // Foreign Key to Billboard
-  billboard   Billboard @relation(fields: [billboardId], references: [id])
+  id          String      @id @default(uuid())
+  storeId     String      // Foreign Key to Store
+  store       Store       @relation("StoreToCategory", fields: [storeId], references: [id])
+  billboardId String      // Foreign Key to Billboard
+  billboard   Billboard   @relation(fields: [billboardId], references: [id])
   name        String
-  products    Product[] // Relation to Product model
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  products    Product[]   @relation("CategoryToProduct")
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
 
   @@index([storeId])
   @@index([billboardId])
 }
 
-// Model representing a product associated with a store
 model Product {
   id          String    @id @default(uuid())
   storeId     String    // Foreign Key to Store
@@ -71,7 +65,7 @@ model Product {
   colorId     String    // Foreign Key to Color
   color       Color     @relation(fields: [colorId], references: [id])
   images      Image[]   // Relation to Image model
-  orderItems  OrderItem[] // Relation to OrderItem model
+  orderItems  OrderItem[]   // Relation to Order model
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 
@@ -81,11 +75,10 @@ model Product {
   @@index([colorId])
 }
 
-// Model representing an order associated with a store
 model Order {
   id        String    @id @default(uuid())
-  storeId   String    // Foreign Key to Store
-  store     Store     @relation("StoreToOrder", fields: [storeId], references: [id])
+  storeId     String    // Foreign Key to Store
+  store       Store     @relation("StoreToOrder", fields: [storeId], references: [id])
   orderItems OrderItem[] // Relation to OrderItem model
   isPaid     Boolean   @default(false)
   phone      String    @default("")
@@ -96,7 +89,7 @@ model Order {
   @@index([storeId])
 }
 
-// Model representing an intermediary for a many-to-many relationship between Order and Product
+// Intermediary for a many-to-many relationship
 model OrderItem {
   id        String  @id @default(uuid())
   orderId   String  // Foreign Key to Order
@@ -108,7 +101,6 @@ model OrderItem {
   @@index([productId])
 }
 
-// Model representing a size associated with a store
 model Size {
   id          String    @id @default(uuid())
   storeId     String    // Foreign Key to Store
@@ -122,11 +114,10 @@ model Size {
   @@index([storeId])
 }
 
-// Model representing a color associated with a store
 model Color {
-  id          String    @id @default(uuid())
-  storeId     String    // Foreign Key to Store
-  store       Store     @relation("StoreToColor", fields: [storeId], references: [id])
+  id          String   @id @default(uuid())
+  storeId     String   // Foreign Key to Store
+  store       Store    @relation("StoreToColor", fields: [storeId], references: [id])
   name        String
   value       String
   products    Product[] // Relation to Product model
@@ -136,14 +127,13 @@ model Color {
   @@index([storeId])
 }
 
-// Model representing an image associated with a product
 model Image {
-  id          String    @id @default(uuid())
-  productId   String    // Foreign Key to Product
-  product     Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
-  url         String    // URL of the image
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  id          String   @id @default(uuid())
+  productId   String   // Foreign Key to Product
+  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url         String   // URL of the image
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 
   @@index([productId])
 }

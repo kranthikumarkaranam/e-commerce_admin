@@ -31,7 +31,7 @@ export const ApiAlert: React.FC<ApiAlertProps> = ({
 	variant = 'public',
 }) => {
 	// Function to handle copying the description to clipboard
-	const onCopy = (description: string) => {
+	const onCopy = () => {
 		navigator.clipboard.writeText(description);
 		toast.success('API Route copied to clipboard.');
 	};
@@ -50,7 +50,7 @@ export const ApiAlert: React.FC<ApiAlertProps> = ({
 				<Button
 					variant='outline'
 					size='sm'
-					onClick={() => onCopy(description)}
+					onClick={onCopy}
 				>
 					<Copy className='h-4 w-4' />
 				</Button>

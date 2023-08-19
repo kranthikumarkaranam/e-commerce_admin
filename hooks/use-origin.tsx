@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'; // Import necessary hooks from React
+import { useEffect, useState } from 'react';
 
-// Create a custom hook named 'useOrigin'
 export const useOrigin = () => {
 	// State to track whether the component is mounted or not
 	const [mounted, setMounted] = useState(false);
