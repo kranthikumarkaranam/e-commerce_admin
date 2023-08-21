@@ -23,7 +23,7 @@ import {
 import { Separator } from '@/components/ui/separator';
 import { Heading } from '@/components/heading';
 import { AlertModal } from '@/components/modals/alert-modal';
-import { ApiAlert } from '@/components/api-copy';
+import { ApiCopy } from '@/components/api-copy';
 import { useOrigin } from '@/hooks/use-origin';
 
 // Define the validation schema using zod
@@ -152,7 +152,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
 			</Form>
 			<Separator />
 			{/* Display API origin */}
-			<ApiAlert
+			<ApiCopy
 				title='NEXT_PUBLIC_API_URL'
 				variant='public'
 				description={`${origin}/api/${params.storeId}`}

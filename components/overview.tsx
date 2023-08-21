@@ -13,8 +13,9 @@ export const Overview: React.FC<OverviewProps> = ({ data }) => {
 			width='100%'
 			height={350}
 		>
+			{/* Bar chart container */}
 			<BarChart data={data}>
-				{/* Bar chart container */}
+				{/* X-axis configuration */}
 				<XAxis
 					dataKey='name'
 					stroke='#888888'
@@ -22,7 +23,8 @@ export const Overview: React.FC<OverviewProps> = ({ data }) => {
 					tickLine={false}
 					axisLine={false}
 				/>
-				{/* X-axis configuration */}
+
+				{/* Y-axis configuration */}
 				<YAxis
 					stroke='#888888'
 					fontSize={12}
@@ -30,13 +32,13 @@ export const Overview: React.FC<OverviewProps> = ({ data }) => {
 					axisLine={false}
 					tickFormatter={(value) => `$${value}`}
 				/>
-				{/* Y-axis configuration */}
+
+				{/* Bar chart data */}
 				<Bar
 					dataKey='total'
 					fill='#3498db'
 					radius={[4, 4, 0, 0]}
 				/>
-				{/* Bar chart data */}
 			</BarChart>
 		</ResponsiveContainer>
 	);

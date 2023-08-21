@@ -1,6 +1,6 @@
 - no .env.local, use .env only
 
-- next config image pattern chnage to latest next image pattern
+- next config image pattern change to latest next image pattern
 
 - use mongodb rather than mysql
 
@@ -10,4 +10,7 @@
 
 - change meta info
 - change zod error messages and min text and placeholders or lables anywhere needed
-- in creating billboard change the path from userID/billboards -> userID/billboards/new (it looks cleaner for me)
+- can make more features such as adding the no of stock for each product at the new product stage and in the frontend use it for archive/unarchive
+- change the stripe left side content to meaningful
+- in stripe go to localhost/api/webhook
+-

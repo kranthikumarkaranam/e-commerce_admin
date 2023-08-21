@@ -1,6 +1,6 @@
 'use client';
 
-import { ApiAlert } from '@/components/api-copy';
+import { ApiCopy } from '@/components/api-copy';
 import { useOrigin } from '@/hooks/use-origin';
 import { useParams } from 'next/navigation';
 
@@ -24,27 +24,27 @@ export const ApiList: React.FC<ApiListProps> = ({
 	return (
 		<>
 			{/* Displaying API endpoints for various actions */}
-			<ApiAlert
+			<ApiCopy
 				title='GET'
 				variant='public'
 				description={`${baseUrl}/${entityName}`}
 			/>
-			<ApiAlert
+			<ApiCopy
 				title='GET'
 				variant='public'
 				description={`${baseUrl}/${entityName}/{${entityIdName}}`}
 			/>
-			<ApiAlert
+			<ApiCopy
 				title='POST'
 				variant='admin'
 				description={`${baseUrl}/${entityName}`}
 			/>
-			<ApiAlert
+			<ApiCopy
 				title='PATCH'
 				variant='admin'
 				description={`${baseUrl}/${entityName}/{${entityIdName}}`}
 			/>
-			<ApiAlert
+			<ApiCopy
 				title='DELETE'
 				variant='admin'
 				description={`${baseUrl}/${entityName}/{${entityIdName}}`}

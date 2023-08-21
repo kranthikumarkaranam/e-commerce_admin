@@ -150,7 +150,7 @@ export async function PATCH(
 			return new NextResponse('Unauthorized', { status: 405 });
 		}
 
-		// Update the product in the database
+		// Update the product in the database by deleting all images first
 		await prismadb.product.update({
 			where: {
 				id: params.productId,
@@ -169,7 +169,7 @@ export async function PATCH(
 			},
 		});
 
-		// Update the product's images in the database
+		// Later, Update the product's images in the database with the new images
 		const product = await prismadb.product.update({
 			where: {
 				id: params.productId,

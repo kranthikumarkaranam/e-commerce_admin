@@ -5,27 +5,27 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Badge, BadgeProps } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
-// Props interface for the ApiAlert component
-interface ApiAlertProps {
+// Props interface for the ApiCopy component
+interface ApiCopyProps {
 	title: string;
 	description: string;
 	variant: 'public' | 'admin';
 }
 
 // Mapping for displaying text based on variant
-const textMap: Record<ApiAlertProps['variant'], string> = {
+const textMap: Record<ApiCopyProps['variant'], string> = {
 	public: 'Public',
 	admin: 'Admin',
 };
 
 // Mapping for assigning badge variant based on variant
-const variantMap: Record<ApiAlertProps['variant'], BadgeProps['variant']> = {
+const variantMap: Record<ApiCopyProps['variant'], BadgeProps['variant']> = {
 	public: 'secondary',
 	admin: 'destructive',
 };
 
-// The main ApiAlert component
-export const ApiAlert: React.FC<ApiAlertProps> = ({
+// The main ApiCopy component
+export const ApiCopy: React.FC<ApiCopyProps> = ({
 	title,
 	description,
 	variant = 'public',
