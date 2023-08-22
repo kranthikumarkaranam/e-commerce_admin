@@ -90,7 +90,7 @@ export const StoreModal = () => {
 									<Button
 										disabled={loading}
 										variant='outline'
-										onClick={storeModal.onClose}
+										onClick={onClose}
 									>
 										Cancel
 									</Button>
