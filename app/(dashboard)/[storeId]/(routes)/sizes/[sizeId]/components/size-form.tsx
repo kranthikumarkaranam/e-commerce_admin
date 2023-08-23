@@ -25,8 +25,12 @@ import { Heading } from '@/components/heading';
 import { AlertModal } from '@/components/modals/alert-modal';
 
 const formSchema = z.object({
-	name: z.string().min(1),
-	value: z.string().min(1),
+	name: z.string().min(3, {
+		message: 'Name must be atleast 3 characters.',
+	}),
+	value: z.string().min(1, {
+		message: 'Value must be atleast 1 character.',
+	}),
 });
 
 type SizeFormValues = z.infer<typeof formSchema>;
@@ -51,6 +55,7 @@ export const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
 		resolver: zodResolver(formSchema),
 		defaultValues: initialData || {
 			name: '',
+			value: '',
 		},
 	});
 
@@ -126,11 +131,11 @@ export const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
 							name='name'
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Name</FormLabel>
+									<FormLabel>Size Name</FormLabel>
 									<FormControl>
 										<Input
 											disabled={loading}
-											placeholder='Size name'
+											placeholder='Extra Large'
 											{...field}
 										/>
 									</FormControl>
@@ -143,11 +148,11 @@ export const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
 							name='value'
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Value</FormLabel>
+									<FormLabel>Size Value</FormLabel>
 									<FormControl>
 										<Input
 											disabled={loading}
-											placeholder='Size value'
+											placeholder='XL'
 											{...field}
 										/>
 									</FormControl>

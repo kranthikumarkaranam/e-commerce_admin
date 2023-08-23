@@ -33,8 +33,12 @@ import {
 
 // Define the validation schema using Zod for the form fields
 const formSchema = z.object({
-	name: z.string().min(2),
-	billboardId: z.string().min(1),
+	name: z.string().min(3, {
+		message: 'Name must be atleast 3 characters.',
+	}),
+	billboardId: z.string().min(1, {
+		message: 'Please choose atleast one.',
+	}),
 });
 
 // Infer the type of form values from the Zod schema
@@ -155,11 +159,14 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
 							name='name'
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Name</FormLabel>
+									<FormLabel>Category Name</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<FormControl>
 										<Input
 											disabled={loading}
-											placeholder='Category name'
+											placeholder="Men's Fashion"
 											{...field}
 										/>
 									</FormControl>
@@ -180,6 +187,9 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
 										value={field.value}
 										defaultValue={field.value}
 									>
+										<span className='text-xs text-muted-foreground'>
+											{'\u00A0'} (required)
+										</span>
 										<FormControl>
 											<SelectTrigger>
 												<SelectValue

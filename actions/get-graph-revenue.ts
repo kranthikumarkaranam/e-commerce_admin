@@ -35,7 +35,7 @@ export const getGraphRevenue = async (
 
 		// Calculate the revenue for each item in the order
 		for (const item of order.orderItems) {
-			revenueForOrder += item.product.price.toNumber();
+			revenueForOrder += item.product.price;
 		}
 
 		// Adding the revenue for this order to the respective month

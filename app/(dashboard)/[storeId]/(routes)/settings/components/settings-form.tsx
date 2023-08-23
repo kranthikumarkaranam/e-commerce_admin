@@ -28,7 +28,9 @@ import { useOrigin } from '@/hooks/use-origin';
 
 // Define the validation schema using zod
 const formSchema = z.object({
-	name: z.string().min(2), // Name field validation
+	name: z.string().min(3, {
+		message: 'Name must be atleast 3 characters.',
+	}), // Name field validation
 });
 
 // Infer the type of form values from the validation schema
@@ -127,11 +129,11 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
 							name='name'
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Name</FormLabel>
+									<FormLabel>Store Name</FormLabel>
 									<FormControl>
 										<Input
 											disabled={loading}
-											placeholder='Store name'
+											placeholder='Fashion Store'
 											{...field}
 										/>
 									</FormControl>

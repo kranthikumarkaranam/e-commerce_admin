@@ -26,9 +26,11 @@ import { AlertModal } from '@/components/modals/alert-modal';
 
 // Define the form schema using zod
 const formSchema = z.object({
-	name: z.string().min(2), // Validate color name
-	value: z.string().min(4).max(9).regex(/^#/, {
-		message: 'String must be a valid hex code', // Validate color value
+	name: z.string().min(3, {
+		message: 'Name must be atleast 3 characters.',
+	}),
+	value: z.string().regex(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/, {
+		message: 'Must be a valid hex code in the format "#ffffff" or "#fff"',
 	}),
 });
 
@@ -59,6 +61,7 @@ export const ColorForm: React.FC<ColorFormProps> = ({ initialData }) => {
 		resolver: zodResolver(formSchema),
 		defaultValues: initialData || {
 			name: '',
+			value: '',
 		},
 	});
 
@@ -138,11 +141,11 @@ export const ColorForm: React.FC<ColorFormProps> = ({ initialData }) => {
 							name='name'
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Name</FormLabel>
+									<FormLabel>Color Name</FormLabel>
 									<FormControl>
 										<Input
 											disabled={loading}
-											placeholder='Color name'
+											placeholder='Navy Blue'
 											{...field}
 										/>
 									</FormControl>
@@ -156,12 +159,12 @@ export const ColorForm: React.FC<ColorFormProps> = ({ initialData }) => {
 							name='value'
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Value</FormLabel>
+									<FormLabel>Color Value</FormLabel>
 									<FormControl>
 										<div className='flex items-center gap-x-4'>
 											<Input
 												disabled={loading}
-												placeholder='Color value'
+												placeholder='#000080'
 												{...field}
 											/>
 											<div

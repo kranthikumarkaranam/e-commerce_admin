@@ -35,12 +35,29 @@ import ImageUpload from '@/components/image-upload';
 import { Checkbox } from '@/components/ui/checkbox';
 
 const formSchema = z.object({
-	name: z.string().min(1),
-	images: z.object({ url: z.string() }).array(),
-	price: z.coerce.number().min(1),
-	categoryId: z.string().min(1),
-	colorId: z.string().min(1),
-	sizeId: z.string().min(1),
+	name: z.string().min(3, {
+		message: 'Name must be atleast 3 characters.',
+	}),
+	images: z
+		.object({
+			url: z.string(),
+		})
+		.array()
+		.min(1, {
+			message: 'Please upload atleast one image.',
+		}),
+	price: z.coerce.number().min(1, {
+		message: 'Price in dollars required.',
+	}),
+	categoryId: z.string().min(1, {
+		message: 'Please choose atleast one.',
+	}),
+	colorId: z.string().min(1, {
+		message: 'Please choose atleast one.',
+	}),
+	sizeId: z.string().min(1, {
+		message: 'Please choose atleast one.',
+	}),
 	isFeatured: z.boolean().default(false).optional(),
 	isArchived: z.boolean().default(false).optional(),
 });
