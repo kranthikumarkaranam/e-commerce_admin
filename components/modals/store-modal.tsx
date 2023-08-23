@@ -60,7 +60,7 @@ export const StoreModal = () => {
 	return (
 		<Modal
 			title='Create store'
-			description='Add a new store to manage products and categories.'
+			description='Add a new store to manage your products.'
 			isOpen={isOpen} // Passing modal open state.
 			onClose={onClose} // Passing modal close function.
 		>
@@ -74,11 +74,11 @@ export const StoreModal = () => {
 									name='name'
 									render={({ field }) => (
 										<FormItem>
-											<FormLabel>Name</FormLabel>
+											<FormLabel>Store Name</FormLabel>
 											<FormControl>
 												<Input
 													disabled={loading}
-													placeholder='E-Commerce'
+													placeholder='Suit Store'
 													{...field}
 												/>
 											</FormControl>
