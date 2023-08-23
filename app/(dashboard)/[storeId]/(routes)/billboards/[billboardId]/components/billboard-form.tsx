@@ -27,8 +27,12 @@ import ImageUpload from '@/components/image-upload';
 
 // Define the validation schema using Zod for the form fields
 const formSchema = z.object({
-	label: z.string().min(1),
-	imageUrl: z.string().min(1),
+	label: z.string().min(1, {
+		message: 'Label must be atleast 3 characters.',
+	}),
+	imageUrl: z.string().min(1, {
+		message: 'Please upload an image.',
+	}),
 });
 
 // Infer the type of form values from the Zod schema
@@ -51,7 +55,9 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
 
 	// Determine title, description, action text, and toast message based on whether it's an edit or create
 	const title = initialData ? 'Edit billboard' : 'Create billboard';
-	const description = initialData ? 'Edit a billboard.' : 'Add a new billboard';
+	const description = initialData
+		? 'Edit your billboard.'
+		: 'Add a new billboard';
 	const toastMessage = initialData
 		? 'Billboard updated.'
 		: 'Billboard created.';
@@ -148,7 +154,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
 						name='imageUrl'
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Background image</FormLabel>
+								<FormLabel>Billboard Background</FormLabel>
 								<FormControl>
 									<ImageUpload
 										value={field.value ? [field.value] : []}
@@ -168,11 +174,11 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
 							name='label'
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Label</FormLabel>
+									<FormLabel>Billboard Label</FormLabel>
 									<FormControl>
 										<Input
 											disabled={loading}
-											placeholder='Billboard label'
+											placeholder='New Arrivals Just for You'
 											{...field}
 										/>
 									</FormControl>
