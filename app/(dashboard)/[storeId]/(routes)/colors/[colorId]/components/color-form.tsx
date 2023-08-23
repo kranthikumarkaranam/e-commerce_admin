@@ -142,6 +142,9 @@ export const ColorForm: React.FC<ColorFormProps> = ({ initialData }) => {
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Color Name</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<FormControl>
 										<Input
 											disabled={loading}
@@ -160,6 +163,9 @@ export const ColorForm: React.FC<ColorFormProps> = ({ initialData }) => {
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Color Value</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<FormControl>
 										<div className='flex items-center gap-x-4'>
 											<Input

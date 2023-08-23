@@ -3,6 +3,11 @@ import prismadb from '@/lib/prismadb';
 // Import the 'ColorForm' component from the './components/color-form' path.
 import { ColorForm } from './components/color-form';
 import { Color } from '@prisma/client';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Admin | Color',
+};
 
 // Define the 'ColorPage' component as an asynchronous function that takes 'params' as an argument.
 const ColorPage = async ({ params }: { params: { colorId: string } }) => {

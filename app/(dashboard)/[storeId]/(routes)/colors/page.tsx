@@ -5,6 +5,11 @@ import prismadb from '@/lib/prismadb';
 import { ColorColumn } from './components/columns';
 // Import the 'ColorClient' component from the './components/client' path
 import { ColorClient } from './components/client';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Admin | Colors',
+};
 
 // Define the 'ColorsPage' component as an asynchronous function that takes 'params' as an argument
 const ColorsPage = async ({ params }: { params: { storeId: string } }) => {

@@ -2,6 +2,11 @@ import { redirect } from 'next/navigation';
 import { auth } from '@clerk/nextjs';
 
 import prismadb from '@/lib/prismadb';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'E-commerce | Admin',
+};
 
 // Define the SetupLayout component as an asynchronous function that takes 'children' as a prop.
 export default async function SetupLayout({

@@ -7,6 +7,11 @@ import prismadb from '@/lib/prismadb';
 // Import the CategoryColumn type and the CategoriesClient component
 import { CategoryColumn } from './components/columns';
 import { CategoriesClient } from './components/client';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Admin | Categories',
+};
 
 // Define the CategoriesPage component
 const CategoriesPage = async ({ params }: { params: { storeId: string } }) => {

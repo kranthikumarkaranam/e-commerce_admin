@@ -25,7 +25,9 @@ import { useStoreModal } from '@/hooks/use-store-modal'; // Custom hook 'useStor
 
 // Defining a schema for form validation using 'zod'.
 const formSchema = z.object({
-	name: z.string().min(1), // Defining a schema for the 'name' field.
+	name: z.string().min(3, {
+		message: 'Name must be atleast 3 characters.',
+	}),
 });
 
 // Defining the 'StoreModal' component.

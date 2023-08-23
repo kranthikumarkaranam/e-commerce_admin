@@ -2,6 +2,11 @@ import prismadb from '@/lib/prismadb';
 
 import { ProductForm } from './components/product-form';
 import { Image, Product } from '@prisma/client';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Admin | Product',
+};
 
 const ProductPage = async ({
 	params,

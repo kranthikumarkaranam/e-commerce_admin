@@ -4,6 +4,12 @@ import { BillboardForm } from './components/billboard-form';
 
 import { Billboard } from '@prisma/client';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Admin | Billboard',
+};
+
 // Define the 'BillboardPage' component which displays the form for a specific billboard.
 const BillboardPage = async ({
 	params,

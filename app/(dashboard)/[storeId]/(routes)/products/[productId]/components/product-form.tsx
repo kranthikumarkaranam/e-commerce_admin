@@ -185,6 +185,9 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 						render={({ field }) => (
 							<FormItem>
 								<FormLabel>Images</FormLabel>
+								<span className='text-xs text-muted-foreground'>
+									{'\u00A0'} (required)
+								</span>
 								<FormControl>
 									<ImageUpload
 										value={field.value.map((image) => image.url)}
@@ -210,6 +213,9 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Name</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<FormControl>
 										<Input
 											disabled={loading}
@@ -227,6 +233,9 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Price</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<FormControl>
 										<Input
 											type='number'
@@ -245,6 +254,9 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Category</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<Select
 										disabled={loading}
 										onValueChange={field.onChange}
@@ -289,6 +301,9 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Size</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<Select
 										disabled={loading}
 										onValueChange={field.onChange}
@@ -333,6 +348,9 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Color</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<Select
 										disabled={loading}
 										onValueChange={field.onChange}
@@ -385,6 +403,9 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 									</FormControl>
 									<div className='space-y-1 leading-none'>
 										<FormLabel>Featured</FormLabel>
+										<span className='text-xs text-muted-foreground'>
+											{'\u00A0'} (optional)
+										</span>
 										<FormDescription>
 											This product will appear on the home page
 										</FormDescription>
@@ -406,6 +427,9 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 									</FormControl>
 									<div className='space-y-1 leading-none'>
 										<FormLabel>Archived</FormLabel>
+										<span className='text-xs text-muted-foreground'>
+											{'\u00A0'} (optional)
+										</span>
 										<FormDescription>
 											This product will not appear anywhere in the store.
 										</FormDescription>

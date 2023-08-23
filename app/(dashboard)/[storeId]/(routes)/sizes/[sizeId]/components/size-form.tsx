@@ -132,6 +132,9 @@ export const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Size Name</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<FormControl>
 										<Input
 											disabled={loading}
@@ -149,6 +152,9 @@ export const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Size Value</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<FormControl>
 										<Input
 											disabled={loading}

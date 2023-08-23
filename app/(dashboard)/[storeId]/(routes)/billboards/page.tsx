@@ -6,6 +6,12 @@ import prismadb from '@/lib/prismadb';
 import { BillboardColumn } from './components/columns';
 import { BillboardClient } from './components/client';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Admin | Billboards',
+};
+
 // Define the 'BillboardsPage' functional component which takes 'params' as a prop.
 const BillboardsPage = async ({ params }: { params: { storeId: string } }) => {
 	// Fetch a list of billboards from the database for the given store ID.

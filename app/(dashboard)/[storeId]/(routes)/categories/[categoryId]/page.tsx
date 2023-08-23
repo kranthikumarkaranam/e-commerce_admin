@@ -1,7 +1,12 @@
 import prismadb from '@/lib/prismadb';
 
 import { CategoryForm } from './components/category-form';
-import { Billboard, Category } from '@prisma/client';
+import { Category } from '@prisma/client';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Admin | Category',
+};
 
 // Define the CategoryPage component
 const CategoryPage = async ({

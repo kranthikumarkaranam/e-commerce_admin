@@ -12,8 +12,9 @@ const inter = Inter({ subsets: ['latin'] });
 
 // Metadata for the application
 export const metadata = {
-	title: 'Dashboard',
-	description: 'E-Commerce Dashboard',
+	title: 'E-Commerce Admin Dashboard',
+	description:
+		'Elevate your e-commerce business with our intuitive Admin Dashboard. Gain real-time insights into sales, inventory, and customer behavior. Streamline operations and drive growth today.',
 };
 
 // Root layout component

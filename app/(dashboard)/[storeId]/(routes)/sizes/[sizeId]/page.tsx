@@ -2,6 +2,11 @@ import prismadb from '@/lib/prismadb';
 
 import { SizeForm } from './components/size-form';
 import { Size } from '@prisma/client';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Admin | Size',
+};
 
 const SizePage = async ({ params }: { params: { sizeId: string } }) => {
 	// Initialize 'data' to be either of type 'Size' or 'null'.

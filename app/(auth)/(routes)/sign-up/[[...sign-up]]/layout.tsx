@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'Authorization',
-	description:
-		'Efficiently manage and control access permissions to ensure data security and privacy.',
+	title: 'E-commerce | Sign Up',
+	description: 'Clerk Signin/SignUp Page',
 };
 
 export default function AuthLayout({

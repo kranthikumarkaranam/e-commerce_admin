@@ -3,6 +3,11 @@ import { auth } from '@clerk/nextjs';
 
 import Navbar from '@/components/navbar';
 import prismadb from '@/lib/prismadb';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Admin | Overview',
+};
 
 // Define the DashboardLayout component as an asynchronous function that takes props containing children and params.
 export default async function DashboardLayout({

@@ -155,6 +155,9 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
 						render={({ field }) => (
 							<FormItem>
 								<FormLabel>Billboard Background</FormLabel>
+								<span className='text-xs text-muted-foreground'>
+									{'\u00A0'} (required)
+								</span>
 								<FormControl>
 									<ImageUpload
 										value={field.value ? [field.value] : []}
@@ -175,6 +178,9 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
 							render={({ field }) => (
 								<FormItem>
 									<FormLabel>Billboard Label</FormLabel>
+									<span className='text-xs text-muted-foreground'>
+										{'\u00A0'} (required)
+									</span>
 									<FormControl>
 										<Input
 											disabled={loading}
