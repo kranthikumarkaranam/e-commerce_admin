@@ -243,14 +243,23 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 											</SelectTrigger>
 										</FormControl>
 										<SelectContent>
-											{categories.map((category) => (
+											{categories.length === 0 ? (
 												<SelectItem
-													key={category.id}
-													value={category.id}
+													value=''
+													disabled
 												>
-													{category.name}
+													No categories found.
 												</SelectItem>
-											))}
+											) : (
+												categories.map((category) => (
+													<SelectItem
+														key={category.id}
+														value={category.id}
+													>
+														{category.name}
+													</SelectItem>
+												))
+											)}
 										</SelectContent>
 									</Select>
 									<FormMessage />
@@ -278,14 +287,23 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 											</SelectTrigger>
 										</FormControl>
 										<SelectContent>
-											{sizes.map((size) => (
+											{sizes.length === 0 ? (
 												<SelectItem
-													key={size.id}
-													value={size.id}
+													value=''
+													disabled
 												>
-													{size.name}
+													No sizes found.
 												</SelectItem>
-											))}
+											) : (
+												sizes.map((size) => (
+													<SelectItem
+														key={size.id}
+														value={size.id}
+													>
+														{size.name}
+													</SelectItem>
+												))
+											)}
 										</SelectContent>
 									</Select>
 									<FormMessage />
@@ -313,14 +331,23 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 											</SelectTrigger>
 										</FormControl>
 										<SelectContent>
-											{colors.map((color) => (
+											{colors.length === 0 ? (
 												<SelectItem
-													key={color.id}
-													value={color.id}
+													value=''
+													disabled
 												>
-													{color.name}
+													No colors found.
 												</SelectItem>
-											))}
+											) : (
+												colors.map((color) => (
+													<SelectItem
+														key={color.id}
+														value={color.id}
+													>
+														{color.name}
+													</SelectItem>
+												))
+											)}
 										</SelectContent>
 									</Select>
 									<FormMessage />

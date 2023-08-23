@@ -190,14 +190,23 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
 										</FormControl>
 										<SelectContent>
 											{/* Render the select options */}
-											{billboards.map((billboard) => (
+											{billboards.length === 0 ? (
 												<SelectItem
-													key={billboard.id}
-													value={billboard.id}
+													value=''
+													disabled
 												>
-													{billboard.label}
+													No billboards found.
 												</SelectItem>
-											))}
+											) : (
+												billboards.map((billboard) => (
+													<SelectItem
+														key={billboard.id}
+														value={billboard.id}
+													>
+														{billboard.label}
+													</SelectItem>
+												))
+											)}
 										</SelectContent>
 									</Select>
 									<FormMessage />
