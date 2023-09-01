@@ -237,7 +237,7 @@ npm run start
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-- See _[Contributing](https://github.com/kranthikumarkaranam/e-commerce_admin/blob/main/CODE_OF_CONDUCT.md)_ for ways to get started.
+- See _[Contributing](https://github.com/kranthikumarkaranam/e-commerce_admin/blob/main/CONTRIBUTING.md)_ for ways to get started.
 - If you have suggestions for adding or removing projects, feel free to _[open an issue](https://github.com/kranthikumarkaranam/e-commerce_admin/issues/new)_ to discuss it, or directly create a pull request by following the guidelines _[here](#pull)_.
 - Please make sure you check your spelling and grammar.
 - Create individual PR for each suggestion.
