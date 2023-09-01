@@ -1,5 +1,9 @@
 <p align="center">
-  <h1 align="center">ADMIN</h1>
+   <a href="https://github.com/kranthikumarkaranam/e-commerce_admin">
+    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/109801522/265072469-bb3cbb5b-49fb-411e-9cbe-210ee6b23109.png" alt="logo" width="180" height="180">
+  </a>
+  
+  <h1 align="center">E-Commerce Admin</h1>
 
   <p align="center">
 Welcome to ADMIN, your ultimate store management solution! Easily handle multiple stores with features like Overview Charts 📊, Billboards 🏞️, Categories 📦, Products 🛒, and Orders 📋 management with store Settings ⚙️, and more. Our sleek UI offers light/dark modes and Clerk authentication for security 🔐. We use Prisma ORM for efficient database management and Next Cloudinary for image uploads 🖼️. Products are automatically archived upon purchase 💰, and you can feature them on your homepage with a simple click. So, why wait? Dive into ADMIN and take control of your stores like never before!
