@@ -219,16 +219,24 @@ npm run start
 - NEXT.js
 - TypeScript
 - Tailwind CSS
+- zod
 - react-hot-toast
 - shadcn/ui
 - Radix UI
-- Headless UI
-- react-spinners
-- axios
-- Stripe
-- zustand
+- Lucide React
+- Next Cloudinary
+- Clerk
+- React Hook Form
+- Prisma ORM
+- Prisma Client
+- React Table
+- TanStack Table
 - date-fns
-- query-string
+- react-spinners
+- Recharts
+- Stripe
+- axios
+- zustand
 
 <br>
 <br>
