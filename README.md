@@ -128,6 +128,9 @@ Welcome to ADMIN, your ultimate store management solution! Easily handle multipl
 
 - **Featured Products**: Easily feature products on your homepage with a simple click to boost sales.
 
+
+_Take control of your stores like never before with ADMIN! Get started today and revolutionize your store management experience._
+
 <br>
 <br>
 
