@@ -156,7 +156,7 @@ npm install
 
 **4. Applying Database Schema Changes with Prisma:**
 
-> Before running this command, ensure you have set up Prisma by `npx prisma generate`.
+> Before running this command, ensure you have set up Prisma using `npx prisma generate`.
 
 ```sh
 npx prisma db push
