@@ -20,8 +20,8 @@ Welcome to ADMIN, your ultimate store management solution! Easily handle multipl
 - [🖼️ Project Screenshots](#screenshots)
 - [💡 Key Features](#features)
 - [🛠️ Installation & Set Up](#installation)
-- [🌱 Environment Variables](#env)
 - [🏭 Building & Running for Production](#production)
+- [🌱 Environment Variables](#env)
 - [💻 Tech Stack](#tech)
 - [🍰 Contribution Guidelines](#contribution)
 - [📝 Creating a Pull Request](#pull)
@@ -173,6 +173,25 @@ npm run dev
 <br>
 <br>
 
+<h2 id="production">🏭 Building & Running for Production</h2>
+
+**1. Generate a full static production build:**
+
+```sh
+npm run build
+```
+
+**2. Preview the site as it will appear once deployed:**
+
+```sh
+npm run start
+```
+
+
+<br>
+<br>
+
+
 <h2 id="env">🌱 Environment Variables</h2>
 
 > To run this project, you need to add the following environment variables to your `.env` file in the project's root directory.
@@ -190,23 +209,6 @@ npm run dev
 - `STRIPE_API_KEY`
 - `STRIPE_WEBHOOK_SECRET`
 - `FRONTEND_STORE_URL`
-
-<br>
-<br>
-
-<h2 id="production">🏭 Building & Running for Production</h2>
-
-**1. Generate a full static production build:**
-
-```sh
-npm run build
-```
-
-**2. Preview the site as it will appear once deployed:**
-
-```sh
-npm run start
-```
 
 <br>
 <br>
