@@ -273,7 +273,7 @@ Contributions are what make the open source community such an amazing place to b
 
 Thank you for taking the time to explore the project. I hope it brings value and joy to those who use it.
 
-If you require any help or have any questions, please don't hesitate to reach out to me _[here](mailto:2019271@iiitdmj.ac.in)_.
+If you require any help or have any questions, please don't hesitate to reach out to me _[here](mailto:kranthikaranam258@gmail.com)_.
 
 <br>
 <br>
