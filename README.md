@@ -108,11 +108,11 @@ Welcome to ADMIN, your ultimate store management solution! Easily handle multipl
 
 - **Billboards** 🏞️: Showcase your products and promotions with eye-catching billboards on your store's homepage.
 
-- **Categories** 📦: Organize your products into categories for easy navigation and better user experience.
+- **Categories** 🗂️: Organize your products into categories for easy navigation and better user experience.
 
-- **Products** 🛒: Add, edit, and manage your product catalog effortlessly.
+- **Products** 🛍️: Add, edit, and manage your product catalog effortlessly.
 
-- **Orders** 📋: Streamline order processing and keep track of customer purchases.
+- **Orders** 📦: Streamline order processing and keep track of customer purchases.
 
 - **Store Settings** ⚙️: Customize your store's settings to meet your specific requirements.
 
@@ -120,13 +120,13 @@ Welcome to ADMIN, your ultimate store management solution! Easily handle multipl
 
 - **Clerk Authentication** 🔐: Ensure the security of your store with robust Clerk authentication.
 
-- **Prisma ORM**: Utilize Prisma ORM for efficient and reliable database management.
+- **Prisma ORM** 📚: Utilize Prisma ORM for efficient and reliable database management.
 
 - **Next Cloudinary Integration** 🖼️: Seamlessly upload and manage images for your products using Next Cloudinary.
 
-- **Automatic Product Archiving** 💰: Products are automatically archived upon purchase to keep your catalog up to date.
+- **Automatic Product Archiving** 🗃️: Products are automatically archived upon purchase to keep your catalog up to date.
 
-- **Featured Products**: Easily feature products on your homepage with a simple click to boost sales.
+- **Featured Products** ⭐: Easily feature products on your homepage with a simple click to boost sales.
 
 
 _Take control of your stores like never before with ADMIN! Get started today and revolutionize your store management experience._
